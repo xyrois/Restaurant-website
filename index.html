@@ -53,6 +53,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a> <!-- Updated here to 'About' -->
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="toggle-cart-btn">Shopping Cart</a>
+                </li>
             </ul>
             <a class="navbar-brand m-auto" href="#">
                 <img src="assets/imgs/file.svg" class="brand-img" alt="">
@@ -91,6 +94,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: black;">Grilled Chicken</h5>
                                     <p class="card-text" style="color: black;"> Price: $11.00 </p>
+                                    <button class="btn btn-sm btn-primary add-to-cart" data-name="Grilled Chicken" data-price="11.00">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -98,6 +102,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: black;">Grilled Cheese</h5>
                                     <p class="card-text" style="color: black;">Price: $8:00 </p>
+                                    <button class="btn btn-sm btn-primary add-to-cart" data-name="Grilled Cheese" data-price="8.00">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -105,6 +110,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: black;">Buffalo Chicken Pizza</h5>
                                     <p class="card-text" style="color: black;">Price: $10:00</p>
+                                    <button class="btn btn-sm btn-primary add-to-cart" data-name="Buffalo Chicken Pizza" data-price="10.00">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="card">
@@ -112,6 +118,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: black;">Biryani</h5>
                                     <p class="card-text" style="color: black;"> Price: $14.00 </p>
+                                    <button class="btn btn-sm btn-primary add-to-cart" data-name="Biryani" data-price="14.00">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -120,6 +127,16 @@
             </div>
         </div>
     </div>
+    
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="p-4">
+            <h3 style="color: black; font-weight: bold;">Shopping Cart</h3>
+            <ul id="cart-items" class="list-group mb-3" style="color: black; font-weight: bold;"></ul>
+            <h4 style="color: black; font-weight: bold;">Total: $<span id="cart-total">0.00</span></h4>
+            <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+        </div>
+    </div>
+    
 
     <!--  Gallery Section -->
     <div id="gallery" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
@@ -218,8 +235,11 @@
             </div>
         </div>
     </div>
-    <!-- end of page footer -->
-
+    <div class="bg-dark text-light text-center border-top wow fadeIn">
+        <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Made with <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com">DevCRUD</a></p>
+    </div>
+    <!-- end of page footer -->  
+    
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -235,6 +255,5 @@
 
     <!-- FoodHut js -->
     <script src="assets/js/foodhut.js"></script>
-
 </body>
 </html>
